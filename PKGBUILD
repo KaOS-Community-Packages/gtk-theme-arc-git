@@ -1,5 +1,5 @@
 pkgname=gtk-theme-arc-git
-pkgver=549.d9d1772
+pkgver=557.e0cbe3f
 pkgrel=1
 pkgdesc='A flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell. (git version)'
 arch=('x86_64')
@@ -17,7 +17,14 @@ pkgver() {
 
 build() {
     cd arc-theme
-    ./autogen.sh --prefix=/usr
+    ./autogen.sh \
+        --prefix=/usr \
+        --disable-cinnamon \
+        --disable-gnome-shell \
+        --disable-metacity \
+        --disable-unity \
+        --disable-xfwm \
+        --disable-xfce-notify
 }
 
 package() {
