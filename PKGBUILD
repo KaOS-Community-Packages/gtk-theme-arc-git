@@ -7,8 +7,6 @@ url="https://github.com/horst3180/arc-theme"
 license=('GPL3')
 depends=('gtk3' 'gtk-engine-murrine')
 makedepends=('git')
-conflicts=('gtk-theme-arc')
-provides=('gtk-theme-arc')
 source=("arc-theme::git+${url}.git")
 sha256sums=('SKIP')
 
